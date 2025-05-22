@@ -10,7 +10,7 @@ export default function ContactPage() {
   return (
     <div>
       <PageHeader
-        title="Contact Us"
+        title="Contact us"
         subtitle="We're here to answer your questions"
       />
 
