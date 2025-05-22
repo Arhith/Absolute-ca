@@ -8,6 +8,25 @@ export const metadata: Metadata = {
   description: 'Explore our premium stainless steel kitchen units and other precision-fabricated products.',
 };
 
+const products = [
+  {
+    name: 'Stainless Steel Sink Units',
+    description: 'Durable, fully welded sink units built to commercial standards with adjustable shelving.',
+  },
+  {
+    name: 'Heavy Duty Corner Units',
+    description: 'Space-saving corner units, perfect for optimizing kitchen layouts in both commercial and domestic settings.',
+  },
+  {
+    name: 'Wall-Mounted Cabinets',
+    description: 'Fully welded stainless wall cupboards, built to last with a sleek finish.',
+  },
+  {
+    name: 'Modular Kitchen Frames',
+    description: 'Customizable modular kitchen units with heavy-duty framework and optional adjustable shelving.',
+  },
+];
+
 export default function ProductsPage() {
   return (
     <div>
@@ -15,14 +34,15 @@ export default function ProductsPage() {
 
       {/* Products Grid */}
       <section className="container-custom py-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {[...Array(4)].map((_, i) => (
+        {products.map((product, i) => (
           <div
             key={i}
             className="flex flex-col items-center bg-white rounded-lg shadow p-6 text-center"
           >
             <div className="bg-gray-200 flex-grow flex items-center justify-center rounded-md mb-4 min-h-[150px]">
-              <p className="text-gray-500">Product Image</p>
+              <p className="text-gray-500">{product.name}</p>
             </div>
+            <p className="text-sm text-gray-600 mb-4">{product.description}</p>
             <a
               href="#"
               className="mt-auto inline-block bg-primary text-white py-2 px-4 rounded hover:bg-opacity-90 transition"
@@ -33,10 +53,10 @@ export default function ProductsPage() {
         ))}
       </section>
 
-      {/* Product Details */}
+      {/* Product Details Section */}
       <section className="container-custom py-16 bg-white">
         <h2 className="text-3xl font-bold mb-4">Heavy Duty Stainless Steel Kitchen Units</h2>
-        <p className="mb-4">Stainless Steel Cupboards And Wall Unit Cabinets Manufactured purely canadian.</p>
+        <p className="mb-4">Stainless Steel Cupboards And Wall Unit Cabinets Manufactured purely Canadian.</p>
         <p className="mb-4">
           Our premium range of commercial stainless steel base units and wall units are manufactured by our factory.
           All our wall cupboards and base units are fully welded and supplied to the highest standards and quality
